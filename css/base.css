@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	overflow: hidden;
+}
+
+canvas {
+	position: absolute;
+	z-index: 1;
+	background: transparent;
+	top: 0;
+	left: 0;
+}
+
+div {
+	position: absolute;
+}
+
+.mountain-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: auto;
+	overflow: hidden;
+}
+
+.sky {
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, #000 0%, #111 50%);
+	background: linear-gradient(to bottom, #000 0%, #111 50%);
+}
+
+.mountains {
+	background: #55729e;
+	background: -webkit-linear-gradient(#677da4, #55729e);
+	background: linear-gradient(#677da4, #55729e);
+	width: 200%;
+	height: 230px;
+	bottom: 0%;
+	z-index: 2;
+	-webkit-clip-path: polygon(0% 62%, 4% 74%, 21% 18%, 24% 32%, 32% 0%, 50% 62%, 54% 74%, 71% 18%, 74% 32%, 82% 0%, 100% 62%, 100% 100%, 0 100%);
+	-webkit-animation: anim50 linear 60s;
+	animation: anim50 linear 60s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	overflow: hidden;
+}
+.mountains .snow {
+	width: 100%;
+	height: 50%;
+	background: -webkit-linear-gradient(#f9feff, transparent);
+	background: linear-gradient(#f9feff, transparent);
+}
+.mountains .mountain-shadow {
+	width: 100%;
+	height: 100%;
+	background: #3d5887;
+	background: -webkit-linear-gradient(#93accc 0%, #3d5887 50%);
+	background: linear-gradient(#93accc 0%, #3d5887 50%);
+	-webkit-clip-path: polygon(4% 74%, 9% 90%, 8% 80%, 14% 64%, 16% 46%, 20% 30%, 21% 18%, 24% 32%, 27% 42%, 31% 50%, 30% 20%, 32% 0%, 54% 74%, 59% 90%, 58% 80%, 64% 64%, 66% 46%, 70% 30%, 71% 18%, 74% 32%, 77% 42%, 81% 50%, 80% 20%, 82% 0%, 100% 0%, 0% 0%);
+}
+
+@-webkit-keyframes anim50 {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+	100% {
+		-webkit-transform: translate(-50%, 0px);
+		transform: translate(-50%, 0px);
+	}
+}
+
+@keyframes anim50 {
+	0% {
+		-webkit-transform: translate(0px, 0px);
+		transform: translate(0px, 0px);
+	}
+	100% {
+		-webkit-transform: translate(-50%, 0px);
+		transform: translate(-50%, 0px);
+	}
+}
